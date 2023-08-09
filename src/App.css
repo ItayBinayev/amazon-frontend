@@ -1,0 +1,26 @@
+/* main {
+    width: min(70rem, 100% - 4rem);
+    margin-inline: auto;
+    margin-block: 2rem;
+  }
+  .rating span {
+    color: #ffc000;
+  }
+  
+  .btn-primary,
+  .btn-outline-primary {
+    background-color: #f0c040;
+    color: #000000;
+    border-width: 0px;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-outline-primary:hover,
+  .btn-outline-primary:focus {
+    background-color: #d3a62c;
+  }
+
+  a{
+    text-decoration: none;
+  } */

@@ -1,0 +1,41 @@
+:root {
+    --card-height: 600px;
+  }
+  
+  .product-card {
+    --transition: 0.2s ease-in-out;
+    --shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: var(--card-height);
+    transition: box-shadow var(--transition), scale var(--transition);
+    box-shadow: var(--shadow);
+    scale: 1;
+  }
+  .product-card:hover {
+    --shadow: 10px 10px 10px #888;
+    /* box-shadow: 10px 10px 10px #888; */
+    scale: 1.02;
+  }
+  
+  .card-image-page {
+    max-width: auto;
+    object-fit: contain;
+    height: calc(var(--card-height) * 2 / 3);
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(var(--card-height) / 3);
+  }
+  
+  .text-shortener {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
