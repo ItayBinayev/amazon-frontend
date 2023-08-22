@@ -24,7 +24,7 @@ const Product = ({ product }) => {
             className="card-image-page"
           />
           </Link>
-          <Card.Body className="card-body">
+          <Card.Body className="card-body-1">
           <Link to={`/product/${product.token}`}>
             <Card.Title className="text-shortener">{product.title}</Card.Title>
             </Link>

@@ -24,7 +24,7 @@
     object-fit: contain;
     height: calc(var(--card-height) * 2 / 3);
   }
-  .card-body {
+  .card-body-1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

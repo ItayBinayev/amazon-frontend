@@ -54,7 +54,7 @@ const OrderPage = () => {
         };
         if(!userInfo)
         {
-            navigate('login');
+            navigate('/signin');
         }
         if(!order || (order._id && orderId !== order._id))
         {
@@ -73,10 +73,10 @@ const OrderPage = () => {
   <div>
     <Title title="Order" />
       <h1 className="my-3">Order {order._id.substr(order._id.length - 5)}</h1>
-      <Row>
+      <Row className="container">
         <Col md={8}>
           <Card className="mb-3">
-            <Card.Body>
+            <Card.Body className='card-fkng-body'>
               <Card.Title>Shipping</Card.Title>
               <Card.Text>
                 <strong>Name: </strong> {order.shippingAddress.fullName} <br />
@@ -93,7 +93,7 @@ const OrderPage = () => {
             </Card.Body>
           </Card>
           <Card className="mb-3">
-            <Card.Body>
+            <Card.Body className='card-fkng-body'>
               <Card.Title>Payment</Card.Title>
               <Card.Text>
                 <strong>Method: </strong> {order.paymentMethod}
@@ -133,6 +133,7 @@ const OrderPage = () => {
             </Card.Body>
           </Card>
         </Col>
+
         <Col md={4}>
           <Card className="mb-3">
             <Card.Body>

@@ -1,11 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-import data from './data';
 import HomePage from './Pages/homepage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './Components/Navbar/navbar';
-import Loading from './Components/Loading/Loading';
-import MsgBox from './Components/MsgBox/MsgBox';
 import { SignInPage } from './Pages/SignInPage/SignInPage';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

@@ -70,20 +70,22 @@ const reducer = (state, { type }) => {
     cart.totalPrice = round2(cart.itemsPrice + cart.shippingPrice + cart.taxPrice);
   
     useEffect(() => {
+      
       if(!paymentMethod){
           navigate("/payment");
       }
-    },[])
+    },[paymentMethod])
 
   return (
     <div>
       <Title title="Orders Summary" />
       <CheckoutSteps step1 step2 step3 step4 />
       <h1 className="my-3">Orders Summary</h1>
-      <Row>
+      <Row className="blblaasda">
         <Col md={8}>
-          <Card className="mb-3">
-            <Card.Body>
+          
+        <Card className="mb-3">
+             <Card.Body>
               <Card.Title>Shipping</Card.Title>
               <Card.Text>
                 <strong>Name: </strong>
@@ -98,10 +100,12 @@ const reducer = (state, { type }) => {
                 <strong>Country: </strong>
                 {cart.shippingAddress.country}
               </Card.Text>
-            </Card.Body>
+            </Card.Body> 
           </Card>
+          
+          
           <Card className="mb-3">
-            <Card.Body>
+             <Card.Body>
               <Card.Title>Payment</Card.Title>
               <Card.Text>
                 <strong>Method: </strong>
@@ -110,6 +114,7 @@ const reducer = (state, { type }) => {
               <Link to="/payment">Edit</Link>
             </Card.Body>
           </Card>
+         
           <Card className="mb-3">
             <Card.Body className="container">
               <Card.Title>Items</Card.Title>

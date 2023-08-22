@@ -19,6 +19,12 @@ header a{
   
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
 
 main {
   width: min(70rem, 100% - 4rem);
