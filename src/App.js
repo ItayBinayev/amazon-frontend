@@ -16,6 +16,7 @@ import PaymentPage from './Pages/PaymentPage/PaymentPage';
 import PlaceOrderPage from './Pages/PlaceOrderPage/PlaceOrderPage';
 import SearchPage from './Pages/SearchPage/SearchPage';
 import ProductPage from './Pages/ProductPage/ProductPage';
+import OrderPage from './Pages/OrderPage/OrderPage';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/placeorder" element={<PlaceOrderPage/>}></Route>
         <Route path="/search" element={<SearchPage/>}></Route>
         <Route path='/product/:token' element={<ProductPage/>}></Route>
+        <Route path='/order/:orderId' element={<OrderPage/>}></Route>
 
 
 

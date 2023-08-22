@@ -56,7 +56,6 @@ const reducer = (state, { type }) => {
         console.log(data)
         dispatch({ type: GET_SUCCESS});
         ctxDispatch({ type: CLEAR_CART});
-        console.log(data)
         navigate(`/order/${data.order._id}`);
   
       } catch (error) {
@@ -112,7 +111,7 @@ const reducer = (state, { type }) => {
             </Card.Body>
           </Card>
           <Card className="mb-3">
-            <Card.Body>
+            <Card.Body className="container">
               <Card.Title>Items</Card.Title>
               <ListGroup variant="flush">
                 {cart.cartItems.map((item) => (
