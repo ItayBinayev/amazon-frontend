@@ -47,7 +47,6 @@ const SearchPage = () => {
             }
         }
         getCategories();
-        console.log(categories);
     },[])
 
     useEffect(() => {
@@ -56,7 +55,6 @@ const SearchPage = () => {
             try{
                 const {data} = await axios.get("/products/search?" + getFilterUrl(search,{}, true));
                 dispatch({type: GET_SUCCESS, payload: data});
-                console.log(data);
             }
             catch(error)
             {
@@ -64,7 +62,6 @@ const SearchPage = () => {
             }
         }
        getData();
-       console.log(products)
     },[category, order, page, price, query, rating])
 
     
@@ -146,7 +143,6 @@ const SearchPage = () => {
                         </Row>
                         {products.length === 0 && (<MsgBox>No Product Found!</MsgBox>)}
                         <Row>
-                                {console.log(products)}
                                 {products.map((p) =>(
                                 <Col sm={6} lg={4} mb={3} key={p._id}>
                                     <Product product={p}/>
