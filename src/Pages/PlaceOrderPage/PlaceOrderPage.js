@@ -53,7 +53,6 @@ const reducer = (state, { type }) => {
           }
         }
         );
-        console.log(data)
         dispatch({ type: GET_SUCCESS});
         ctxDispatch({ type: CLEAR_CART});
         navigate(`/order/${data.order._id}`);
