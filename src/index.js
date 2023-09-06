@@ -7,7 +7,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 import { StoreProvider } from './Context/Store';
-axios.defaults.baseURL = 'http://localhost:5000/api';
+axios.defaults.baseURL = process.env.REACT_APP_API_ROUTE ? `${process.env.REACT_APP_API_ROUTE}/api` :'https://amazon-backend-seven.vercel.app/api';
+
+console.log(process.env.REACT_APP_API_ROUTE)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
